@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require "services/machine_translations/translator_service"
+
 Decidim.configure do |config|
   # The name of the application
   config.application_name = Rails.application.secrets.decidim[:application_name]
@@ -309,7 +311,9 @@ Decidim.configure do |config|
   # for more information about how it works and how to set it up.
   #
   # Enable machine translations
-  config.enable_machine_translations = false
+  config.enable_machine_translations = true
+  config.machine_translation_delay = 0.seconds
+
   #
   # If you want to enable machine translation you can create your own service
   # to interact with third party service to translate the user content.
@@ -334,7 +338,7 @@ Decidim.configure do |config|
   #   end
   # end
   #
-  # config.machine_translation_service = "MyTranslationService"
+  config.machine_translation_service = "Services::MachineTranslations::TranslatorService"
 
   # Defines the name of the cookie used to check if the user allows Decidim to
   # set cookies.
