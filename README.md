@@ -44,4 +44,4 @@ Do this after the [Reproduce machine translations cache bug](#reproduce-machine-
 5. The proposal created previously should still be highlighted here;
 6. Try to toggle between _original text_ and _automatically-translated text_. **It should work fine by now**.
 
-[Solution here](https://todo)
+[Solution here](https://github.com/derayo94/decidim-app-cache-problems/pull/2/files)
