@@ -27,5 +27,10 @@ module TestDecidimApp
 
     # Autoload lib folder
     config.autoload_paths << "#{Rails.root}/lib"
+
+    config.to_prepare do
+      list = Dir.glob(Rails.root.join("lib/extends/**/*.rb"))
+      list.each { |override| require_dependency override }
+    end
   end
 end
