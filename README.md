@@ -16,8 +16,9 @@ rails db:create
 rails db:migrate
 rails db:seed # custom seeds
 ```
-4. Enable dev caching: `rails dev:cache`;
-5. Start the server: `rails s`.
+4. Install NPM dependencies: `npm i`;
+5. Enable dev caching: `rails dev:cache`;
+6. Start the server: `rails s`.
 
 You're good to go!
 
